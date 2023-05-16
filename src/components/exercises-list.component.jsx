@@ -3,8 +3,8 @@ import axios from 'axios';
 import Exercise from './exercise.component'
 
 export default class ExercisesList extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.deleteExercise = this.deleteExercise.bind(this);
         this.state = { exercises: [] };
     }
