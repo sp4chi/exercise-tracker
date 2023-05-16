@@ -3,8 +3,8 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
 export default class CreateExercise extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         //ref
         this.userInput = React.createRef();
 
@@ -77,7 +77,7 @@ export default class CreateExercise extends Component {
         axios.post('http://localhost:5000/exercises/add', exercise)
             .then(res => console.log(res.data));
 
-        window.location = '/';
+        //window.location = '/';
     }
 
     render() {
